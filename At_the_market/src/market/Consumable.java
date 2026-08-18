@@ -15,12 +15,13 @@ public interface Consumable {
 	public boolean isRipe();
 
 	/**
+	 * Checks if the fruits or vegetables are expired or not.
 	 * 
-	 * @param dateVerification
-	 * @return
+	 * @param dateVerification The target date.
+	 * @return true if is expired, else false.
 	 */
 	public boolean isExpired(LocalDate dateVerification);
-	
+
 	/**
 	 * 
 	 * @param dateVerification
