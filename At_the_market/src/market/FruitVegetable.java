@@ -30,7 +30,7 @@ public class FruitVegetable extends Product implements Consumable {
 
 	@Override
 	public boolean isExpired(LocalDate dateVerification) {
-		return false;
+		return this.daysRemainingBeforeExpiration(dateVerification) < 0;
 	}
 
 	@Override
