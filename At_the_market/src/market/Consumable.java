@@ -23,9 +23,10 @@ public interface Consumable {
 	public boolean isExpired(LocalDate dateVerification);
 
 	/**
+	 * Say the difference between the expiration date and the target date.
 	 * 
-	 * @param dateVerification
-	 * @return
+	 * @param dateVerification The target date.
+	 * @return Number of days until the expiration date.
 	 */
 	public long daysRemainingBeforeExpiration(LocalDate dateVerification);
 
