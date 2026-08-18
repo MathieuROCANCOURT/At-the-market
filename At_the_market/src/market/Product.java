@@ -33,7 +33,70 @@ public abstract class Product {
 		this.pickingDate = pickingDate;
 		this.shelfLifeDays = shelfLifeDays;
 	}
+
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * @return the unitPrice
+	 */
+	public double getUnitPrice() {
+		return unitPrice;
+	}
 	
+	/**
+	 * @return the stockQuantity
+	 */
+	public double getStockQuantity() {
+		return stockQuantity;
+	}
+
+	/**
+	 * @return the pickingDate
+	 */
+	public LocalDate getPickingDate() {
+		return pickingDate;
+	}
+
+	/**
+	 * @return the shelfLifeDays
+	 */
+	public int getShelfLifeDays() {
+		return shelfLifeDays;
+	}
+
+	/**
+	 * @return the unit
+	 */
+	public String getUnit() {
+		return unit;
+	}
+
+	/**
+	 * @param stockQuantity the stockQuantity to set
+	 */
+	public void setStockQuantity(double stockQuantity) {
+		this.stockQuantity = stockQuantity;
+	}
+
+	/**
+	 * @param pickingDate the pickingDate to set
+	 */
+	public void setPickingDate(LocalDate pickingDate) {
+		this.pickingDate = pickingDate;
+	}
+
+	/**
+	 * @param shelfLifeDays the shelfLifeDays to set
+	 */
+	public void setShelfLifeDays(int shelfLifeDays) {
+		this.shelfLifeDays = shelfLifeDays;
+	}
+
 	public abstract void calculateExpirationDate();
 	
 	public void updateProduct() {
