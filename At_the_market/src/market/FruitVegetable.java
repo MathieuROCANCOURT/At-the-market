@@ -4,6 +4,7 @@
 package market;
 
 import java.time.LocalDate;
+import java.time.ZoneId;
 
 /**
  * 
@@ -24,7 +25,8 @@ public class FruitVegetable extends Product implements Consumable {
 
 	@Override
 	public boolean isRipe() {
-		return false;
+		return calculateExpirationDate().minusDays(4).isBefore(LocalDate.now(ZoneId.of("UTC")))
+				&& calculateExpirationDate().isAfter(LocalDate.now(ZoneId.of("UTC")).plusDays(1));
 	}
 
 	@Override
