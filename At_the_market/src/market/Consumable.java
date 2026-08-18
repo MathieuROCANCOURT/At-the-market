@@ -6,7 +6,10 @@ package market;
 import java.time.LocalDate;
 
 /**
+ * Calculate the fruits or vegetables are ripe, if is expired and the number of
+ * days until expiration date.
  * 
+ * @author RocancourtM
  */
 public interface Consumable {
 	/**
