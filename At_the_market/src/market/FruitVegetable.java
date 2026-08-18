@@ -4,6 +4,7 @@
 package market;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 /**
  * 
@@ -34,7 +35,7 @@ public class FruitVegetable extends Product implements Consumable {
 
 	@Override
 	public long daysRemainingBeforeExpiration(LocalDate dateVerification) {
-		return dateVerification.getLong(null) - super.getPickingDate().getLong(null);
+		return dateVerification.compareTo(super.getPickingDate().plusDays(super.getShelfLifeDays()));
 	}
 
 	@Override
