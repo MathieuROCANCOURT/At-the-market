@@ -24,7 +24,7 @@ public abstract class Product {
 	 * @param pickingDate   Harvest date
 	 * @param shelfLifeDays Number of days to keep
 	 */
-	public Product(String name, double unitPrice, String unit, double stockQuantity, LocalDate pickingDate,
+	protected Product(String name, double unitPrice, String unit, double stockQuantity, LocalDate pickingDate,
 			int shelfLifeDays) {
 		this.name = name;
 		this.unitPrice = unitPrice;
