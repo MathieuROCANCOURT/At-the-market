@@ -8,7 +8,7 @@ import java.time.LocalDate;
 /**
  * 
  */
-public class FruitVetetable extends Product implements Consumable {
+public class FruitVegetable extends Product implements Consumable {
 	/**
 	 * @param name
 	 * @param unitPrice
@@ -17,32 +17,28 @@ public class FruitVetetable extends Product implements Consumable {
 	 * @param pickingDate
 	 * @param shelfLifeDays
 	 */
-	public FruitVetetable(String name, double unitPrice, String unit, double stockQuantity, LocalDate pickingDate,
+	public FruitVegetable(String name, double unitPrice, String unit, double stockQuantity, LocalDate pickingDate,
 			int shelfLifeDays) {
 		super(name, unitPrice, unit, stockQuantity, pickingDate, shelfLifeDays);
 	}
 
 	@Override
 	public boolean isRipe() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean isExpired(LocalDate dateVerification) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public long daysRemainingBeforeExpiration(LocalDate dateVerification) {
-		// TODO Auto-generated method stub
-		return 0;
+		return dateVerification.getLong(null) - super.getPickingDate().getLong(null);
 	}
 
 	@Override
-	public void calculateExpirationDate() {
-		// TODO Auto-generated method stub
-		
+	public LocalDate calculateExpirationDate() {
+		return super.getPickingDate().plusDays(this.getShelfLifeDays());
 	}
 }
