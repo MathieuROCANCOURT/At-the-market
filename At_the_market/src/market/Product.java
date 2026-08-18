@@ -97,7 +97,7 @@ public abstract class Product {
 		this.shelfLifeDays = shelfLifeDays;
 	}
 
-	public abstract void calculateExpirationDate();
+	public abstract LocalDate calculateExpirationDate();
 	
 	public void updateProduct() {
 		
