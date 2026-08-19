@@ -129,6 +129,8 @@ public abstract class Product {
 
 	/**
 	 * Update the product.
+	 * 
+	 * @param quantityWithdawn Quantity withdrawn by the customer.
 	 */
 	public void updateProduct(double quantityWithdawn) {
 		setStockQuantity(this.stockQuantity - quantityWithdawn);
