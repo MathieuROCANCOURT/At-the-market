@@ -12,6 +12,7 @@ import java.time.ZoneId;
  * @author RocancourtM
  */
 public class Shop {
+	/** Actual date and time on the local machine. */
 	public static LocalDate dateTime = LocalDate.now(ZoneId.of("UTC"));
 	
 	/**
