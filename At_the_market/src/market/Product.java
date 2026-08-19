@@ -130,7 +130,7 @@ public abstract class Product {
 	/**
 	 * Update the product.
 	 */
-	public void updateProduct() {
-
+	public void updateProduct(double quantityWithdawn) {
+		setStockQuantity(this.stockQuantity - quantityWithdawn);
 	}
 }
