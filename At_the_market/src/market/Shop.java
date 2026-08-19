@@ -14,14 +14,14 @@ import java.time.ZoneId;
 public class Shop {
 	/** Actual date and time on the local machine. */
 	public static LocalDate dateTime = LocalDate.now(ZoneId.of("UTC"));
-	
+
+	/** Fruit and vegetables list */
+	public FruitVegetable[] listFruitVegetable;
+
 	/**
-	 * Main program
-	 * 
-	 * @param args Arguments in command line.
+	 * Create fruits and vegetables list.
 	 */
-	public static void main(String[] args) {
-		/** Create fruits and vegetables list. **/
+	public Shop() {
 		FruitVegetable clementine = new FruitVegetable("Clémentine", 2.9, Unit.KG.label, 6, dateTime, 10);
 		FruitVegetable date = new FruitVegetable("Datte", 7, Unit.KG.label, 4, dateTime, 10);
 		FruitVegetable pomegranate = new FruitVegetable("Grenade", 3, Unit.KG.label, 3.5, dateTime, 10);
@@ -44,20 +44,29 @@ public class Shop {
 		FruitVegetable blackRadish = new FruitVegetable("Radis noir", 5, Unit.PIECE.label, 10, dateTime, 10);
 		FruitVegetable salsify = new FruitVegetable("Clementine", 2.5, Unit.KG.label, 3, dateTime, 10);
 
-		FruitVegetable[] shop = new FruitVegetable[] { clementine, date, pomegranate, persimmon, kiwi, tangerine,
+		this.listFruitVegetable = new FruitVegetable[] { clementine, date, pomegranate, persimmon, kiwi, tangerine,
 				orange, grapefruit, pear, apple, carrot, brusselsSprouts, greenCabbage, butternutSquash, endive,
 				spinach, leek, pumpkin, blackRadish, salsify };
-		
-		System.out.println(shop[0].daysRemainingBeforeExpiration(dateTime.plusDays(3)));
-		System.out.println(shop[0].daysRemainingBeforeExpiration(dateTime.plusDays(9)));
+	}
 
-		System.out.println(shop[0].isRipe()); // false
-		
+	/**
+	 * Main program
+	 * 
+	 * @param args Arguments in command line.
+	 */
+	public static void main(String[] args) {
+		Shop shop = new Shop();
+
+		System.out.println(shop.listFruitVegetable[0].daysRemainingBeforeExpiration(dateTime.plusDays(3)));
+		System.out.println(shop.listFruitVegetable[0].daysRemainingBeforeExpiration(dateTime.plusDays(9)));
+
+		System.out.println(shop.listFruitVegetable[0].isRipe()); // false
+
 		dateTime = dateTime.plusDays(8);
-		System.out.println(shop[0].isRipe()); // true
-		
+		System.out.println(shop.listFruitVegetable[0].isRipe()); // true
+
 		dateTime = dateTime.plusDays(3);
-		System.out.println(shop[0].isRipe()); // false
+		System.out.println(shop.listFruitVegetable[0].isRipe()); // false
 	}
 
 }
