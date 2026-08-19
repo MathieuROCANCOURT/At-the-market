@@ -12,7 +12,7 @@ public class Customer implements BasketManager {
 	private String firstName;
 	private String lastName;
 	private ArrayList<Product> basket = new ArrayList<>();
-	
+
 	public Customer(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -48,6 +48,12 @@ public class Customer implements BasketManager {
 
 	@Override
 	public double totalCost() {
-		
+		double cost = 0;
+
+		for (Product product : this.basket) {
+			cost += product.getStockQuantity() * product.getUnitPrice();
+		}
+
+		return cost;
 	}
 }
