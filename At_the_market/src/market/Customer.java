@@ -34,12 +34,16 @@ public class Customer implements BasketManager {
 
 	@Override
 	public void addToBasket(Product product) {
-		
+		this.basket.add(product);
 	}
 
 	@Override
 	public void removeBasket(Product product) {
-		
+		if (this.basket.contains(product)) {
+			this.basket.remove(product);
+		} else {
+			System.err.println("Le produit n'est pas dans la liste.");
+		}
 	}
 
 	@Override
