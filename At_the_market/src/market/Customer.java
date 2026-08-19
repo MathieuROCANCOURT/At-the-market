@@ -17,4 +17,18 @@ public class Customer {
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
+
+	/**
+	 * @return the firstName
+	 */
+	public String getFirstName() {
+		return firstName;
+	}
+
+	/**
+	 * @return the lastName
+	 */
+	public String getLastName() {
+		return lastName;
+	}
 }
