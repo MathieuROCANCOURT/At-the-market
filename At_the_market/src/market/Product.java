@@ -40,6 +40,8 @@ public abstract class Product {
 	}
 
 	/** 
+	 * Get the product name.
+	 * 
 	 * @return the name
 	 */
 	public String getName() {
@@ -47,6 +49,8 @@ public abstract class Product {
 	}
 
 	/**
+	 * Get the unit price.
+	 * 
 	 * @return the unitPrice
 	 */
 	public double getUnitPrice() {
@@ -54,6 +58,17 @@ public abstract class Product {
 	}
 
 	/**
+	 * Get "pièces" or "kg".
+	 * 
+	 * @return the unit
+	 */
+	public String getUnit() {
+		return unit;
+	}
+
+	/**
+	 * Get the quantity in the stock.
+	 * 
 	 * @return the stockQuantity
 	 */
 	public double getStockQuantity() {
@@ -61,6 +76,8 @@ public abstract class Product {
 	}
 
 	/**
+	 * Get the harvest date.
+	 * 
 	 * @return the pickingDate
 	 */
 	public LocalDate getPickingDate() {
@@ -68,17 +85,12 @@ public abstract class Product {
 	}
 
 	/**
+	 * Get the number of days to keep.
+	 * 
 	 * @return the shelfLifeDays
 	 */
 	public int getShelfLifeDays() {
 		return shelfLifeDays;
-	}
-
-	/**
-	 * @return the unit
-	 */
-	public String getUnit() {
-		return unit;
 	}
 
 	/**
