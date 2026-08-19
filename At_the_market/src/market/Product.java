@@ -94,6 +94,8 @@ public abstract class Product {
 	}
 
 	/**
+	 * Change the quantity in the stock.
+	 * 
 	 * @param stockQuantity the stockQuantity to set
 	 */
 	public void setStockQuantity(double stockQuantity) {
@@ -101,6 +103,8 @@ public abstract class Product {
 	}
 
 	/**
+	 * Change the picking date.
+	 * 
 	 * @param pickingDate the pickingDate to set
 	 */
 	public void setPickingDate(LocalDate pickingDate) {
@@ -108,6 +112,8 @@ public abstract class Product {
 	}
 
 	/**
+	 * Change the number of days to keep.
+	 * 
 	 * @param shelfLifeDays the shelfLifeDays to set
 	 */
 	public void setShelfLifeDays(int shelfLifeDays) {
