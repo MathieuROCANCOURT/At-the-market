@@ -14,6 +14,9 @@ public enum Unit {
 	public final String label;
 
 	/**
+	 * Indicate whether the price of fruits or vegetables is per piece or per
+	 * kilogram.
+	 * 
 	 * @param label "pièces" or "kg".
 	 */
 	private Unit(String label) {
