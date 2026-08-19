@@ -17,7 +17,7 @@ public class Shop {
 	/**
 	 * Main program
 	 * 
-	 * @param args
+	 * @param args Arguments in command line.
 	 */
 	public static void main(String[] args) {
 		/** Create fruits and vegetables list. **/
