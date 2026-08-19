@@ -6,7 +6,12 @@ package market;
 import java.time.LocalDate;
 
 /**
+ * Generate a product with a name, the price with unit, the quantity, the
+ * harvest date and the number of days to keep.
  * 
+ * We can calculate the expiration date and update the product.
+ * 
+ * @author RocancourtM
  */
 public abstract class Product {
 	private String name;
@@ -34,7 +39,7 @@ public abstract class Product {
 		this.shelfLifeDays = shelfLifeDays;
 	}
 
-	/**
+	/** 
 	 * @return the name
 	 */
 	public String getName() {
@@ -47,7 +52,7 @@ public abstract class Product {
 	public double getUnitPrice() {
 		return unitPrice;
 	}
-	
+
 	/**
 	 * @return the stockQuantity
 	 */
@@ -103,8 +108,8 @@ public abstract class Product {
 	 * @return The expiration date.
 	 */
 	public abstract LocalDate calculateExpirationDate();
-	
+
 	public void updateProduct() {
-		
+
 	}
 }
