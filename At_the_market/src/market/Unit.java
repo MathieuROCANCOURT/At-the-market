@@ -9,13 +9,16 @@ package market;
  * @author RocancourtM
  */
 public enum Unit {
-	KG("kg"), PIECE("pièces");
+	/** Price expressed per kilogram. */
+	KG("kg"),
+	/** Price expressed per piece. */
+	PIECE("pièces");
 
+	/** Display label associated with the unit. */
 	public final String label;
 
 	/**
-	 * Indicate whether the price of fruits or vegetables is per piece or per
-	 * kilogram.
+	 * Creates a unit.
 	 * 
 	 * @param label "pièces" or "kg".
 	 */
