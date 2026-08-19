@@ -7,12 +7,16 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 
 /**
+ * Generate a Shop selling with Products that are fruits and vegetables.
  * 
+ * @author RocancourtM
  */
 public class Shop {
 	public static LocalDate dateTime = LocalDate.now(ZoneId.of("UTC"));
 	
 	/**
+	 * Main program
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
