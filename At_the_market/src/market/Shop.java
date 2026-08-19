@@ -48,6 +48,29 @@ public class Shop {
 				orange, grapefruit, pear, apple, carrot, brusselsSprouts, greenCabbage, butternutSquash, endive,
 				spinach, leek, pumpkin, blackRadish, salsify };
 	}
+	
+	@Override
+	public String toString() {
+		String display = "Voici la liste des fruits et légumes.";
+		display += "----------------------------------------------";
+		
+		StringBuilder strBuilder = new StringBuilder();
+		for (Product product : this.listFruitVegetable) {
+			strBuilder.append(product.getName());
+			strBuilder.append(": ");
+			strBuilder.append(product.getStockQuantity() + ' ');
+			strBuilder.append(product.getUnit());
+			strBuilder.append(", prix: ");
+			strBuilder.append(product.getUnitPrice());
+			strBuilder.append("€/");
+			strBuilder.append(product.getUnit());
+			strBuilder.append('\n');
+		}
+		
+		display += strBuilder.toString();
+		display += "----------------------------------------------";
+		return display;
+	}
 
 	/**
 	 * Main program
