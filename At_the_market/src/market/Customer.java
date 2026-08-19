@@ -39,12 +39,27 @@ public class Customer implements BasketManager {
 	
 	@Override
 	public void reduceQuantity(Product product, double quantity) {
-		
+		if (this.basket.contains(product)) {
+			Product targetProduct = this.basket.get(this.basket.indexOf(product));
+			double newQuantity = targetProduct.getStockQuantity() - quantity;
+			
+			if (newQuantity >= 0) {
+				targetProduct.setStockQuantity(newQuantity);
+			} else {
+				System.err.println("La quantité enlevée ne peut pas être négative.");
+			}
+		} else {
+			System.err.println("Le produit n'est pas dans la liste.");
+		}
 	}
 	
 	@Override
 	public void raiseQuantity(Product product, double quantity) {
-		
+		if (this.basket.contains(product)) {
+			this.basket.remove(product);
+		} else {
+			System.err.println("Le produit n'est pas dans la liste.");
+		}
 	}
 
 	@Override
