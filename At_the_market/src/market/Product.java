@@ -127,6 +127,9 @@ public abstract class Product {
 	 */
 	public abstract LocalDate calculateExpirationDate();
 
+	/**
+	 * Update the product.
+	 */
 	public void updateProduct() {
 
 	}
