@@ -8,7 +8,7 @@ import java.util.ArrayList;
 /**
  * 
  */
-public class Customer {
+public class Customer implements BasketManager {
 	private String firstName;
 	private String lastName;
 	private ArrayList<Product> basket = new ArrayList<>();
@@ -30,5 +30,20 @@ public class Customer {
 	 */
 	public String getLastName() {
 		return lastName;
+	}
+
+	@Override
+	public void addToBasket(Product product) {
+		
+	}
+
+	@Override
+	public void removeBasket(Product product) {
+		
+	}
+
+	@Override
+	public double totalCost() {
+		
 	}
 }
