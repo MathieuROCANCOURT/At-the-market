@@ -12,6 +12,8 @@ public class Customer implements BasketManager {
 	private String firstName;
 	private String lastName;
 	private ArrayList<Product> basket = new ArrayList<>();
+	
+	private static final String MESSAGE_NOT_IN_LIST = "Le produit n'est pas dans la liste.";
 
 	public Customer(String firstName, String lastName) {
 		this.firstName = firstName;
@@ -49,7 +51,7 @@ public class Customer implements BasketManager {
 				System.err.println("La quantité enlevée ne peut pas être négative.");
 			}
 		} else {
-			System.err.println("Le produit n'est pas dans la liste.");
+			System.err.println(MESSAGE_NOT_IN_LIST);
 		}
 	}
 	
@@ -58,7 +60,7 @@ public class Customer implements BasketManager {
 		if (this.basket.contains(product)) {
 			this.basket.remove(product);
 		} else {
-			System.err.println("Le produit n'est pas dans la liste.");
+			System.err.println(MESSAGE_NOT_IN_LIST);
 		}
 	}
 
@@ -67,7 +69,7 @@ public class Customer implements BasketManager {
 		if (this.basket.contains(product)) {
 			this.basket.remove(product);
 		} else {
-			System.err.println("Le produit n'est pas dans la liste.");
+			System.err.println(MESSAGE_NOT_IN_LIST);
 		}
 	}
 
