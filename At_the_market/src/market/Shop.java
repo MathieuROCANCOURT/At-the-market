@@ -42,7 +42,7 @@ public class Shop {
 		FruitVegetable leek = new FruitVegetable("Poireau", 1.20, Unit.KG.label, 5, dateTime, 10);
 		FruitVegetable pumpkin = new FruitVegetable("Potiron", 2.50, Unit.PIECE.label, 6, dateTime, 10);
 		FruitVegetable blackRadish = new FruitVegetable("Radis noir", 5, Unit.PIECE.label, 10, dateTime, 10);
-		FruitVegetable salsify = new FruitVegetable("Clementine", 2.5, Unit.KG.label, 3, dateTime, 10);
+		FruitVegetable salsify = new FruitVegetable("Salsifis", 2.5, Unit.KG.label, 3, dateTime, 10);
 
 		this.listFruitVegetable = new FruitVegetable[] { clementine, date, pomegranate, persimmon, kiwi, tangerine,
 				orange, grapefruit, pear, apple, carrot, brusselsSprouts, greenCabbage, butternutSquash, endive,
