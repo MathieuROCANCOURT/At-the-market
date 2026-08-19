@@ -11,5 +11,5 @@ public interface BasketManager {
 
 	public void removeBasket(Product product);
 
-	public void totalCost();
+	public double totalCost();
 }
