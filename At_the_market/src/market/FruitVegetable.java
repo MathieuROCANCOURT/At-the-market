@@ -6,10 +6,13 @@ package market;
 import java.time.LocalDate;
 
 /**
- * 
+ * Generate a Fruit or a Vegetable with Product abstract class and Consumable
+ * interface.
  */
 public class FruitVegetable extends Product implements Consumable {
 	/**
+	 * Generate a Fruit or a Vegetable.
+	 * 
 	 * @param name          Fruit or vegetable name
 	 * @param unitPrice     Price to piece or kg
 	 * @param unit          "piece" or "kg"
