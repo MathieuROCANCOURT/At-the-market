@@ -36,6 +36,16 @@ public class Customer implements BasketManager {
 	public void addToBasket(Product product) {
 		this.basket.add(product);
 	}
+	
+	@Override
+	public void reduceQuantity(Product product, double quantity) {
+		
+	}
+	
+	@Override
+	public void raiseQuantity(Product product, double quantity) {
+		
+	}
 
 	@Override
 	public void removeBasket(Product product) {
