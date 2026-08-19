@@ -42,6 +42,17 @@ public class Shop {
 		FruitVegetable[] shop = new FruitVegetable[] { clementine, date, pomegranate, persimmon, kiwi, tangerine,
 				orange, grapefruit, pear, apple, carrot, brusselsSprouts, greenCabbage, butternutSquash, endive,
 				spinach, leek, pumpkin, blackRadish, salsify };
+		
+		System.out.println(shop[0].daysRemainingBeforeExpiration(dateTime.plusDays(3)));
+		System.out.println(shop[0].daysRemainingBeforeExpiration(dateTime.plusDays(9)));
+
+		System.out.println(shop[0].isRipe()); // false
+		
+		dateTime = dateTime.plusDays(8);
+		System.out.println(shop[0].isRipe()); // true
+		
+		dateTime = dateTime.plusDays(3);
+		System.out.println(shop[0].isRipe()); // false
 	}
 
 }
