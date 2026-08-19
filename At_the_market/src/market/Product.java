@@ -97,6 +97,11 @@ public abstract class Product {
 		this.shelfLifeDays = shelfLifeDays;
 	}
 
+	/**
+	 * Calculate the expiration date.
+	 * 
+	 * @return The expiration date.
+	 */
 	public abstract LocalDate calculateExpirationDate();
 	
 	public void updateProduct() {
