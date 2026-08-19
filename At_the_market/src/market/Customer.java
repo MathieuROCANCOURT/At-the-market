@@ -12,7 +12,7 @@ public class Customer implements BasketManager {
 	private String firstName;
 	private String lastName;
 	private ArrayList<Product> basket = new ArrayList<>();
-	
+
 	private static final String MESSAGE_NOT_IN_LIST = "Le produit n'est pas dans la liste.";
 
 	public Customer(String firstName, String lastName) {
@@ -38,13 +38,13 @@ public class Customer implements BasketManager {
 	public void addToBasket(Product product) {
 		this.basket.add(product);
 	}
-	
+
 	@Override
 	public void reduceQuantity(Product product, double quantity) {
 		if (this.basket.contains(product)) {
 			Product targetProduct = this.basket.get(this.basket.indexOf(product));
 			double newQuantity = targetProduct.getStockQuantity() - quantity;
-			
+
 			if (newQuantity >= 0) {
 				targetProduct.setStockQuantity(newQuantity);
 			} else {
@@ -54,7 +54,7 @@ public class Customer implements BasketManager {
 			System.err.println(MESSAGE_NOT_IN_LIST);
 		}
 	}
-	
+
 	@Override
 	public void raiseQuantity(Product product, double quantity) {
 		if (this.basket.contains(product)) {
@@ -82,5 +82,24 @@ public class Customer implements BasketManager {
 		}
 
 		return cost;
+	}
+
+	@Override
+	public String toString() {
+		String display = "Il y a: " + this.basket.size() + " article(s). Voici le panier de " + this.firstName + " "
+				+ this.lastName + ":\n";
+
+		StringBuilder strBuilder = new StringBuilder();
+		for (Product product : this.basket) {
+			strBuilder.append(product.getName());
+			strBuilder.append(": ");
+			strBuilder.append(product.getStockQuantity() + ' ');
+			strBuilder.append(product.getUnit());
+			strBuilder.append('\n');
+		}
+		
+		display += strBuilder.toString();
+		display += "Le coût total est de " + this.totalCost() + "€.";
+		return display;
 	}
 }
